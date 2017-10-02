@@ -5,82 +5,102 @@
     <title>My first Page</title>
     <link rel="stylesheet" type="text/css" href="Main.css"/>
 </head>
-<body>
+<body style="background-color: lightgrey">
+
+<div class="main-conteiner">
 
 
-<div class="left">
-    <div class="search-form">
-        <input class="text-area" placeholder="Назва товару">
-        <button class="add-button">Додати</button>
+    <div class="left">
+        <div class="search-form">
+            <input class="text-area" placeholder="Назва товару">
+            <button data-tooltip="Додати новий товар" class="add-button" >Додати</button>
+        </div>
+        <!--<hr>-->
+        <div class="products">
+            <div class="products-container">
+                <div class="name-of-item">
+                    Помідори
+                </div>
+                <div class="quantity-of-item">
+                    <button data-tooltip="Зменшити кількість цього товару" class=" red-minus-icon" type="button" >-</button>
+                    <input class="counter" type="text" value="1">
+                    <button data-tooltip="Збільшити кількість цього товару" class="green-plus-button" type="button" >+</button>
+                </div>
+                <div class="condition-of-item">
+                    <button data-tooltip="Видалити цей товар" class="red-delete-button" type="button" >✖</button>
+                    <button data-tooltip="Купити цей товар" class="bought-button" type="button" >Купити</button>
+                </div>
+            </div>
+
+            <div class="products-container">
+                <div class="name-of-item">
+                    Печиво
+                </div>
+                <div class="quantity-of-item">
+                    <button data-tooltip="Зменшити кількість цього товару" class=" red-minus-icon" type="button" >-</button>
+                    <input class="counter" type="text" value="1">
+                    <button data-tooltip="Збільшити кількість цього товару" class="green-plus-button" type="button" >+</button>
+                </div>
+                <div class="condition-of-item">
+                    <button data-tooltip="Видалити цей товар" class="red-delete-button" type="button" >✖</button>
+                    <button data-tooltip="Купити цей товар" class="bought-button" type="button" >Купити</button>
+                </div>
+            </div>
+
+            <div class="products-container">
+                <div class="name-of-item">
+                    Сир
+                </div>
+                <div class="quantity-of-item">
+                    <button data-tooltip="Зменшити кількість цього товару" class=" red-minus-icon" type="button" >-</button>
+                    <input class="counter" type="text" value="1">
+                    <button data-tooltip="Збільшити кількість цього товару" class="green-plus-button" type="button" >+</button>
+                </div>
+                <div class="condition-of-item">
+                    <button data-tooltip="Видалити цей товар" class="red-delete-button" type="button" >✖</button>
+                    <button data-tooltip="Купити цей товар" class="bought-button" type="button" >Купити</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <hr>
-    <div class="products">
-        <div class="name-of-item">
-            Помідори
+    <div class="right">
+        <div class="producrs-left">
+            Залишилось
         </div>
-        <div class="quantity-of-item">
-            <button class=" red-minus-icon">-</button>
-            <div class="counter">1</div>
-            <button class="green-plus-button">+</button>
+        <div class="name-of-left-products">
+            <span class="left-item-label">
+                <div class="name-of-left-item">
+                    Помідори
+                    <span class="number-of-items">1</span>
+                </div>
+            </span>
+            <span class="left-item-label">
+                <div class="name-of-left-item">
+                    Печиво
+                     <span class="number-of-items">1</span>
+                </div>
+            </span>
+            <span class="left-item-label">
+                <div class="name-of-left-item">
+                    Сир
+                    <span class="number-of-items">1</span>
+                </div>
+            </span>
         </div>
 
-        <button class="red-delete-button" title="Видалити">✖</button>
-        <div class="bought-button">Куплено</div>
-        <hr>
-        <div class="name-of-item">
-            Печиво
-        </div>
-        <div class="quantity-of-item">
-            <button class=" red-minus-icon">-</button>
-            <div class="counter">1</div>
-            <button class="green-plus-button">+</button>
+        <div class="producrs-bought">
+            Куплено
         </div>
 
-        <button class="red-delete-button" title="Видалити">✖</button>
-        <div class="bought-button">Куплено</div>
-        <hr>
-        <div class="name-of-item">
-            Сир
+    </div>
+    <div class="outer">
+        <div class="my-buy-list">
+            <div class="top-label">Buy List</div>
+            <div class="bottom-label">Created By Aleksey Avdeenko</div>
         </div>
-        <div class="quantity-of-item">
-            <button class=" red-minus-icon">-</button>
-            <div class="counter">1</div>
-            <button class="green-plus-button">+</button>
-        </div>
-        <button class="red-delete-button" title="Видалити">✖</button>
-        <div class="bought-button">Куплено</div>
     </div>
 </div>
-<div class="right">
-    <div class="producrs-left">
-        Залишилось
-    </div>
-    <hr>
-    <div class="name-of-left-products">
-        <span class="left-item-label">
-            <div class="name-of-left-item">
-                Помідори
-                <span class="number-of-items">1</span>
-            </div>
-        </span>
-        <span class="left-item-label">
-            <div class="name-of-left-item">
-                Печиво
-                 <span class="number-of-items">1</span>
-            </div>
-        </span>
-        <span class="left-item-label">
-            <div class="name-of-left-item">
-                Сир
-                <span class="number-of-items">1</span>
-            </div>
-        </span>
-    </div>
-    <hr>
-    <div class="producrs-bought">
-        Куплено
-    </div>
-    <hr>
+
 </div>
 </body>
 </html>
