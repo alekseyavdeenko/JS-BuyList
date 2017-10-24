@@ -11,6 +11,7 @@
     border-bottom-color: lightgray;
 }
 
+
 .left, .right{
     border: 1px;
     border-style: solid;
@@ -62,6 +63,7 @@
     font-size: 1rem;
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     box-shadow: 0 5px 8px -3px darkblue;
+
 }
 
 .name-of-item {
@@ -70,6 +72,7 @@
     width: 35%;
     padding: 7px;
     padding-left: 20px;
+    border: none;
     color: rgba(0, 0, 0, .87);
 }
 
@@ -93,10 +96,15 @@
     margin-bottom: 5px;
 }
 
-.red-minus-icon {
+.red-minus-icon:disabled{
     background-color: #f09797;
     box-shadow: 0 5px 8px -3px darkred;
 }
+.red-minus-icon:enabled{
+    background-color: #DB2828;
+    box-shadow: 0 5px 8px -3px darkred;
+}
+
 
 .green-plus-button {
     background-color: #21BA45;
@@ -108,11 +116,11 @@
     background-color: #E8E8E8;
     border: 0;
     width: 30px;
-    height: 30px;
+    height: 20px;
     border-radius: 5px;
-    font-size: .64285714rem;
     text-align: center;
     margin-bottom: 3px;
+    vertical-align: middle;
 }
 
 .red-delete-button {
@@ -125,10 +133,9 @@
     padding-left: 0.4em;
     padding-right: 0.4em;
     box-shadow: 0 3px 3px -1px maroon;
-
 }
 
-.bought-button {
+.bought-button, .unBought-button {
     background-color: #E8E8E8;
     border-radius: 5px;
     margin-right: 5px;
@@ -139,8 +146,12 @@
     padding-right: 0.4em;
     text-align: center;
     box-shadow: 0 3px 3px -2px lightgray;
-    width: 60px;
+    width: 70px;
     float: right;
+}
+.unBought-button{
+    display: none;
+
 }
 
 .condition-of-item {
@@ -172,17 +183,19 @@
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif
 }
 
-.left-item-label {
+.left-item-label, .bought-item-label {
     background-color: white;
     padding: 0.5em;
     display: inline-block;
+    display: none;
 }
+
 
 .name-of-left-products {
     background-color: white;
 }
 
-.name-of-left-item {
+.name-of-left-item, .name-of-bought-item {
     background-color: #E8E8E8;
     border-radius: 5px;
     margin-left: 10px;
@@ -190,7 +203,7 @@
     font-size: .64285714rem;
 }
 
-.number-of-items {
+.number-of-items, .number-of-bought-items {
     background-color: orange;
     color: white;
     border-radius: 20px;
@@ -208,18 +221,17 @@
     font-size: 1.28rem;
     font-weight: bold;
     padding-top: 15px;
-    margin-bottom: 15px;
+
     padding-bottom: 15px;
     padding-left: 20px;
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 .my-buy-list {
-
     display: inline-block;
     position: fixed;
     bottom: -150px;
-    left: 150px;
+    left: 60px;
     width: 150px;
     height: 200px;
     border-radius: 20px;
@@ -229,7 +241,6 @@
     border-style: solid;
     border-color: #6b6b6b;
     transition: all 2s ease;
-
 }
 
 .top-label, .bottom-label {
